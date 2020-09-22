@@ -26,7 +26,7 @@ if [ ! -f "$IBMCLOUD" ]; then
 fi
 
 # set default env
-IBM_MEMORY=${IBM_MEMORY:-"128M"}
+IBM_MEMORY=${IBM_MEMORY:-"256M"}
 V2_ID=${V2_ID:-"176b96ed-763f-48e4-98aa-7f654bd011ee"}
 V2_PATH=${V2_PATH:-"H14LDHJXmjhDcvRM"}
 ALTER_ID=${ALTER_ID:-"100"}
