@@ -26,10 +26,10 @@ if [ ! -f "$IBMCLOUD" ]; then
 fi
 
 # set default env
-IBM_MEMORY=${IBM_MEMORY:-"256M"}
-V2_ID=${V2_ID:-"d007eab8-ac2a-4a7f-287a-f0d50ef08680"}
+IBM_MEMORY=${IBM_MEMORY:-"128M"}
+V2_ID=${V2_ID:-"176b96ed-763f-48e4-98aa-7f654bd011ee"}
 V2_PATH=${V2_PATH:-"path"}
-ALTER_ID=${ALTER_ID:-"1"}
+ALTER_ID=${ALTER_ID:-"100"}
 mkdir -p $IBM_APP_NAME
 
 if [ ! -f "./config/v2ray" ]; then
@@ -83,12 +83,12 @@ chmod +x ./$IBM_APP_NAME/d.sh
 if [ ! -f "$HOME/.bluemix/cfcli/cf" ]; then
     echo "${BLUE}ibmcloud cf install${END}"
     $IBMCLOUD cf install
-    #$IBMCLOUD target --cf-api 'https://api.us-south.cf.cloud.ibm.com'
+    #$IBMCLOUD target --cf-api 'https://api.eu-gb.cf.cloud.ibm.com'
 fi
 #$IBMCLOUD target --cf
 
 echo "${BLUE}cf login${END}"
-$CF login -a https://api.us-south.cf.cloud.ibm.com <<EOF
+$CF login -a https://api.eu-gb.cf.cloud.ibm.com <<EOF
 $IBM_ACCOUNT
 EOF
 
